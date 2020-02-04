@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+}
+
+.photos {
+    border-radius: 50%;
+    height: 100px
+}
+
+.profiles {
+    display: flex;
+    flex-wrap: wrap;
+}
