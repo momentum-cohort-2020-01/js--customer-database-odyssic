@@ -2,11 +2,34 @@
     display: flex;
 }
 
+.flex-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .photos {
     border-radius: 50px;
     height: 100px;
+    align-self: center;
 }
 
+.name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: bolder;
+    text-align: center;
+    padding: 12px;
+}
+
+.email {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: gray;
+    text-align: center;
+}
+
+
+}
 .profiles {
     display: flex;
     flex-wrap: wrap;
