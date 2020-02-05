@@ -8,37 +8,41 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+/* main container */
+
 .container {
     display: flex;
+    flex-wrap: wrap;
     align-content: center;
-    height: 300px;
-    border: solid blue;
+    height: 200px;
+    border: solid red;
     border-width: thick;
 }
+
+
+/* profile boxes */
 
 .flex-box {
     display: flex;
-    flex-wrap: wrap;
-    padding: 12px;
-    align-content: center;
-    width: 500;
+    flex: none;
+    /* align-content: center; */
+    width: 236px;
     border: solid green;
     border-width: thick;
-    width: auto;
 }
 
 .photos {
-    display: flex;
-    border-radius: 50px;
+    /* display: flex; */
+    border-radius: 50px 100px;
     width: 100px;
-    align-self: center;
     align-content: center;
     /* border: solid red; */
     width: 200px;
 }
 
 .name {
-    display: flex;
+    /* display: flex; */
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     font-weight: bolder;
@@ -49,7 +53,7 @@ h1 {
 }
 
 .email {
-    display: flex;
+    /* display: flex; */
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
     color: gray;
@@ -60,10 +64,10 @@ h1 {
 }
 
 .profiles {
-    display: flex;
+    /* display: flex; */
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
     text-align: center;
-    /* border: solid red; */
+    text-transform: capitalize;
     width: 200px;
 }
