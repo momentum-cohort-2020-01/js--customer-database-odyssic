@@ -14,11 +14,24 @@ const wholeName = customers.map(function(customer) {
 
 for (let customer of customers) {
     container_block = document.querySelector("#container");
+
     const name = document.createElement("div");
     container_block.parentElement.appendChild(name);
 
     const email = document.createElement("div");
     container_block.parentElement.appendChild(email);
+
+    const addressOne = document.createElement("div");
+    container_block.parentElement.appendChild(addressOne);
+
+    const addressTwo = document.createElement("div");
+    container_block.parentElement.appendChild(addressTwo);
+
+    const dateOfBirth = document.createElement("div");
+    container_block.parentElement.appendChild(dateOfBirth);
+
+    customerSince = document.createElement("div");
+    container_block.parentElement.appendChild(customerSince);
 
     name.innerHTML = wholeName;
     email.innerHTML = customer.email;
@@ -26,8 +39,6 @@ for (let customer of customers) {
     addressTwo.innerHTML = customer.location.city;
     dateOfBirth.innerHTML = customer.dob;
     customerSince.innerHTML = customer.registered;
-
-    block_to_insert.className = "primary";
 
     // carYearParent.classList.add("input-invalid");
 
