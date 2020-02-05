@@ -27,16 +27,20 @@ for (let customer of customers) {
     emailDiv.classList.add("email");
 
     const addressOne = document.createElement("div");
-    container_block.parentElement.appendChild(addressOne);
+    addressOneDiv = container_block.parentElement.appendChild(addressOne);
+    addressOneDiv.classList.add("profiles");
 
     const addressTwo = document.createElement("div");
-    container_block.parentElement.appendChild(addressTwo);
+    addressTwoDiv = container_block.parentElement.appendChild(addressTwo);
+    addressTwoDiv.classList.add("profiles");
 
     const dateOfBirth = document.createElement("div");
-    container_block.parentElement.appendChild(dateOfBirth);
+    dateOfBirthDiv = container_block.parentElement.appendChild(dateOfBirth);
+    dateOfBirthDiv.classList.add("profiles");
 
     customerSince = document.createElement("div");
-    container_block.parentElement.appendChild(customerSince);
+    customerSinceDiv = container_block.parentElement.appendChild(customerSince);
+    customerSinceDiv.classList.add("profiles");
 
     name.innerHTML = wholeName;
     email.innerHTML = customer.email;
