@@ -1,10 +1,8 @@
 for (let customer of customers) {
-    container_block = document.querySelector("#container");
-
-    container_block.classList.add("flex-box");
+    container_block = document.querySelector("#flex-box");
 
     const picture = document.createElement("img");
-    const pictureDiv = container_block.parentElement.appendChild(picture);
+    const pictureDiv = container_block.appendChild(picture);
     pictureDiv.classList.add("photos");
 
     picture.src = customer.picture.large;
@@ -18,57 +16,37 @@ for (let customer of customers) {
         " " +
         capitalizeFirstLetter(customer.name.last);
 
+    let capitalizedStreet = capitalizeFirstLetter(customer.location.street);
+    let capitalizedCity = capitalizeFirstLetter(customer.location.city);
+
     const name = document.createElement("div");
-    const nameDiv = container_block.parentElement.appendChild(name);
+    const nameDiv = container_block.appendChild(name);
     nameDiv.classList.add("name");
 
     const email = document.createElement("div");
-    emailDiv = container_block.parentElement.appendChild(email);
+    emailDiv = container_block.appendChild(email);
     emailDiv.classList.add("email");
 
     const addressOne = document.createElement("div");
-    addressOneDiv = container_block.parentElement.appendChild(addressOne);
+    addressOneDiv = container_block.appendChild(addressOne);
     addressOneDiv.classList.add("profiles");
 
     const addressTwo = document.createElement("div");
-    addressTwoDiv = container_block.parentElement.appendChild(addressTwo);
+    addressTwoDiv = container_block.appendChild(addressTwo);
     addressTwoDiv.classList.add("profiles");
 
     const dateOfBirth = document.createElement("div");
-    dateOfBirthDiv = container_block.parentElement.appendChild(dateOfBirth);
+    dateOfBirthDiv = container_block.appendChild(dateOfBirth);
     dateOfBirthDiv.classList.add("profiles");
 
     customerSince = document.createElement("div");
-    customerSinceDiv = container_block.parentElement.appendChild(customerSince);
+    customerSinceDiv = container_block.appendChild(customerSince);
     customerSinceDiv.classList.add("profiles");
 
     name.innerHTML = wholeName;
     email.innerHTML = customer.email;
-    addressOne.innerHTML = customer.location.street;
-    addressTwo.innerHTML = customer.location.city;
+    addressOne.innerHTML = capitalizedStreet;
+    addressTwo.innerHTML = capitalizedCity + " " + customer.location.postcode;
     dateOfBirth.innerHTML = customer.dob;
     customerSince.innerHTML = customer.registered;
 }
-
-// var img = document.createElement("img");
-
-// img.src = "image.png";
-// var src = document.getElementById("x");
-
-// src.appendChild(img);
-
-// let email = customer.email;
-
-// function addressFormat() {
-//     let address = 'location' { street }
-// }
-
-// customers { customer { location } }
-
-// function createMenuListItem(menuItem) {
-//     const listItem = document.createElement("li");
-//     // create an image element
-//     const figure = document.createElement("figure");
-//     const img = document.createElement("img");
-//     img.src = menuItem.img;
-//     img.alt = menuItem.description;

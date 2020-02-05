@@ -4,10 +4,16 @@
     padding: 0;
 }
 
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .container {
     display: flex;
     align-content: center;
-    height: 200px;
+    height: 300px;
+    border: solid blue;
+    border-width: thick;
 }
 
 .flex-box {
@@ -15,33 +21,49 @@
     flex-wrap: wrap;
     padding: 12px;
     align-content: center;
-    width: 200px;
+    width: 500;
+    border: solid green;
+    border-width: thick;
+    width: auto;
 }
 
 .photos {
+    display: flex;
     border-radius: 50px;
-    height: 100px;
+    width: 100px;
     align-self: center;
+    align-content: center;
+    /* border: solid red; */
+    width: 200px;
 }
 
 .name {
+    display: flex;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     font-weight: bolder;
     text-align: center;
     padding: 12px;
+    /* border: solid red; */
+    width: 200px;
 }
 
 .email {
+    display: flex;
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
     color: gray;
     text-align: center;
+    padding: 10px;
+    /* border: solid red; */
+    width: 200px;
 }
 
-
-}
 .profiles {
+    display: flex;
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
+    text-align: center;
+    /* border: solid red; */
+    width: 200px;
 }
