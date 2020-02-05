@@ -1,19 +1,27 @@
-function capitalizeFirstLetter(string) {
-    return string[0].toUpperCase() + string.slice(1);
-}
+// function capitalizeFirstLetter(string) {
+//     return string[0].toUpperCase() + string.slice(1);
+// }
 
-const wholeName = customers.map(function(customer) {
-    return (
-        capitalizeFirstLetter(customer.name.first) +
-        " " +
-        capitalizeFirstLetter(customer.name.last)
-    );
+// const wholeName = customers.map(function(customer) {
+//     return (
+//         capitalizeFirstLetter(customer.name.first) +
+//         " " +
+//         capitalizeFirstLetter(customer.name.last)
+//     );
 
-    console.log("cap name ran");
-});
+//     console.log("cap name ran");
+// });
 
 for (let customer of customers) {
     container_block = document.querySelector("#container");
+
+    container_block.classList.add("container");
+
+    const picture = document.createElement("img");
+    const pictureDiv = container_block.parentElement.appendChild(picture);
+    pictureDiv.classList.add("photos");
+
+    picture.src = customer.picture.large;
 
     const name = document.createElement("div");
     container_block.parentElement.appendChild(name);
@@ -33,16 +41,19 @@ for (let customer of customers) {
     customerSince = document.createElement("div");
     container_block.parentElement.appendChild(customerSince);
 
-    name.innerHTML = wholeName;
+    name.innerHTML = customer.name.first.last;
     email.innerHTML = customer.email;
     addressOne.innerHTML = customer.location.street;
     addressTwo.innerHTML = customer.location.city;
     dateOfBirth.innerHTML = customer.dob;
     customerSince.innerHTML = customer.registered;
 
-    // carYearParent.classList.add("input-invalid");
+    // var img = document.createElement("img");
 
-    // parentElement.appendChild(customer.wholeName);
+    // img.src = "image.png";
+    // var src = document.getElementById("x");
+
+    // src.appendChild(img);
 }
 
 // let email = customer.email;
@@ -60,25 +71,3 @@ for (let customer of customers) {
 //     const img = document.createElement("img");
 //     img.src = menuItem.img;
 //     img.alt = menuItem.description;
-
-//     const caption = document.createElement("figcaption");
-//     caption.textContent = menuItem.title;
-
-//     figure.appendChild(img);
-//     figure.appendChild(caption);
-//     listItem.appendChild(figure);
-
-//     return listItem;
-// }
-
-// function showMenuItems() {
-//     const list = document.querySelector("#menu-items");
-
-//     for (const item of menuItems) {
-//         const listItem = createMenuListItem(item);
-//         list.appendChild(listItem);
-//     }
-// }
-
-// showMenuItems();
-// ()
