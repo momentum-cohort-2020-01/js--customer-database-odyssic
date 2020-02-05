@@ -12,37 +12,39 @@ for (let customer of customers) {
     function capitalizeFirstLetter(string) {
         return string[0].toUpperCase() + string.slice(1);
     }
-    capitalizeFirstLetter(customer.name.first) +
+
+    let wholeName =
+        capitalizeFirstLetter(customer.name.first) +
         " " +
         capitalizeFirstLetter(customer.name.last);
+
+    const name = document.createElement("div");
+    const nameDiv = container_block.parentElement.appendChild(name);
+    nameDiv.classList.add("name");
+
+    const email = document.createElement("div");
+    emailDiv = container_block.parentElement.appendChild(email);
+    emailDiv.classList.add("email");
+
+    const addressOne = document.createElement("div");
+    container_block.parentElement.appendChild(addressOne);
+
+    const addressTwo = document.createElement("div");
+    container_block.parentElement.appendChild(addressTwo);
+
+    const dateOfBirth = document.createElement("div");
+    container_block.parentElement.appendChild(dateOfBirth);
+
+    customerSince = document.createElement("div");
+    container_block.parentElement.appendChild(customerSince);
+
+    name.innerHTML = wholeName;
+    email.innerHTML = customer.email;
+    addressOne.innerHTML = customer.location.street;
+    addressTwo.innerHTML = customer.location.city;
+    dateOfBirth.innerHTML = customer.dob;
+    customerSince.innerHTML = customer.registered;
 }
-
-const name = document.createElement("div");
-const nameDiv = container_block.parentElement.appendChild(name);
-nameDiv.classList.add("name");
-
-const email = document.createElement("div");
-emailDiv = container_block.parentElement.appendChild(email);
-emailDiv.classList.add("email");
-
-const addressOne = document.createElement("div");
-container_block.parentElement.appendChild(addressOne);
-
-const addressTwo = document.createElement("div");
-container_block.parentElement.appendChild(addressTwo);
-
-const dateOfBirth = document.createElement("div");
-container_block.parentElement.appendChild(dateOfBirth);
-
-customerSince = document.createElement("div");
-container_block.parentElement.appendChild(customerSince);
-
-name.innerHTML = wholeName;
-email.innerHTML = customer.email;
-addressOne.innerHTML = customer.location.street;
-addressTwo.innerHTML = customer.location.city;
-dateOfBirth.innerHTML = customer.dob;
-customerSince.innerHTML = customer.registered;
 
 // var img = document.createElement("img");
 

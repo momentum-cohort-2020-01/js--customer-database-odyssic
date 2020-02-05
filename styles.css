@@ -1,10 +1,13 @@
 .container {
     display: flex;
+    align-content: center;
 }
 
 .flex-box {
     display: flex;
     flex-wrap: wrap;
+    padding: 12px;
+    align
 }
 
 .photos {
