@@ -24,7 +24,7 @@ h1 {
 /* profile boxes */
 
 .flex-box {
-    display: flex;
+    display: inline-block;
     flex: none;
     /* align-content: center; */
     width: 236px;
