@@ -28,7 +28,6 @@ h1 {
     flex: none;
     /* align-content: center; */
     width: 236px;
-    border: solid green;
     border-width: thick;
 }
 
